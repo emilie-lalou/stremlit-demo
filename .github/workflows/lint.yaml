@@ -12,8 +12,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: Install uv with ${{ matrix.python-version }}
       uses: astral-sh/setup-uv@v5
-        with:
-          python-version: ${{ matrix.python-version }}
+      with:
+        python-version: ${{ matrix.python-version }}
     - name: Analysing the code with ruff
       run: |
         uv run ruff check
